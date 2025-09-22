@@ -1,13 +1,13 @@
 from flask import Flask
 from routes.payments import payments_bp
-from routes.shipping import shipping_bp
+# from routes.shipping import shipping_bp
 
-def create_ap():
+def create_app():
     app = Flask(__name__)
 
 
     app.register_blueprint(payments_bp, url_prefix="/payments")
-    app.register_blueprint(shipping_bp, url_prefix="/shipping")
+    # app.register_blueprint(shipping_bp, url_prefix="/shipping")
 
     return app
 

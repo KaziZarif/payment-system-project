@@ -21,7 +21,7 @@ def create_checkout_session():
             }],
             mode="payment",
             success_url="http://localhost:5000/success",
-            failure_url="http://localhost:5000/cancel",
+            cancel_url="http://localhost:5000/cancel",
         )
         return redirect(session.url, code=303)
     except Exception as e:
